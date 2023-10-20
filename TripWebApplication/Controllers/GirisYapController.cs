@@ -28,5 +28,11 @@ namespace TripWebApplication.Controllers
             }
             else { return View(); }
         }
-    }
+		public ActionResult LogOut()
+		{
+			FormsAuthentication.SignOut();
+            return RedirectToAction("Login","GirisYap");
+		}
+
+	}
 }
