@@ -22,12 +22,26 @@ namespace TripWebApplication.Controllers
 
 		public ActionResult BlogDetail(int id)
 		{
-            ViewBag.ID = id;
+            
             BlogPage.BlogList = Db.Blogs.Where(x => x.ID == id).ToList();
 			BlogPage.LastBlogs = Db.Blogs.OrderByDescending(b => b.Tarih).Take(3).ToList();
 			BlogPage.YorumList = Db.Yorumlars.Where(x => x.Blogid == id).ToList();
 			BlogPage.LastYorumlars = Db.Yorumlars.OrderByDescending(b => b.Tarih).Take(2).ToList();
 			return View(BlogPage);
+		}
+        [HttpGet]
+		public PartialViewResult YorumYap(int id)
+		{
+			ViewBag.deger = id;
+			return PartialView();
+		}
+
+		[HttpPost]
+        public PartialViewResult YorumYap(Yorumlar y)
+        {
+			Db.Yorumlars.Add(y);
+			Db.SaveChanges();
+			return PartialView();
 		}
 	}
 }
