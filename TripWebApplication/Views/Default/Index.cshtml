@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+@await Component.InvokeAsync("_IndexHeaderPartial")
+
+<div class"content"="">
+    <div class="wrap">
+        <div class="wrapper">
+
+            <div class="con-top">
+                <h3>Tatil Seyahat Bloğuma Hoşgeldiniz!</h3>
+                <p>
+                    Bir yere gitmeden önce mutlaka ama mutlaka bu siteye göz atın derim. Türkiye’deki en geniş çaplı seyahat sitelerinden.
+                    Ayrıntılı olarak çoğu bilgiye ulaşabilirsiniz.
+                    <br />
+                    Hangi ülkeye nasıl gidilir, ne yenir, oraya kadar gitmişken başka nereye gidilir gibi daha onlarca sorunuzun cevabını tek tek bulabilirsiniz!
+                </p>
+            </div>
+
+
+            @await Component.InvokeAsync("_IndexTreeBlogPartial")
+
+            <!---728x90--->
+            <div class="grids">
+                <div class="box1">
+
+                    @await Component.InvokeAsync("_IndexLastTenBlog")
+
+                    @await Component.InvokeAsync("_IndexLastSixBlog")
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

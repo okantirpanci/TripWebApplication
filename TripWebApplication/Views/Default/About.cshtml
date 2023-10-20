@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>Hakkımızda</h3>
+            <!---728x90--->
+
+            @foreach (var x in Model)
+            {
+                <img src="@x.PhotoUrl" alt="">
+                <p>@x.Aciklama</p>
+            }
+
+        </div>
+    </div>
+</div>
+
