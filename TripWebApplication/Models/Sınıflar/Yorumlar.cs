@@ -13,6 +13,8 @@ namespace TripWebApplication.Models.Sınıflar
         public string KullaniciAdi { get; set; }
         public string Mail { get; set; }
         public string Yorum { get; set; }
-        public Blog Blog { get; set; }
+        public DateTime Tarih { get; set; }
+        public int Blogid { get; set; }
+        public virtual Blog Blog { get; set; }
     }
 }

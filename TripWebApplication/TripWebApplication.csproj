@@ -127,6 +127,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -137,6 +139,7 @@
     <Compile Include="Models\Sınıflar\AdresBlog.cs" />
     <Compile Include="Models\Sınıflar\Anasayfa.cs" />
     <Compile Include="Models\Sınıflar\Blog.cs" />
+    <Compile Include="Models\Sınıflar\BlogPage.cs" />
     <Compile Include="Models\Sınıflar\Context.cs" />
     <Compile Include="Models\Sınıflar\Hakkimizda.cs" />
     <Compile Include="Models\Sınıflar\Yorumlar.cs" />
@@ -270,7 +273,14 @@
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="weblogin\fonts\Asap-Regular.ttf" />
     <Content Include="weblogin\fonts\Audiowide-Regular.ttf" />
-    <Content Include="Views\Default\About.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Blog\Blog.cshtml" />
+    <Content Include="Views\Blog\BlogDetail.cshtml" />
+    <Content Include="Views\Default\Partial1.cshtml" />
+    <Content Include="Views\Default\Partial2.cshtml" />
+    <Content Include="Views\Default\Partial3.cshtml" />
+    <Content Include="Views\Default\Partial4.cshtml" />
+    <Content Include="Views\Default\Partial5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
