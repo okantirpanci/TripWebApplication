@@ -11,6 +11,7 @@ namespace TripWebApplication.Controllers
     {
         // GET: Admin
 		Context db = new Context();
+		[Authorize]
         public ActionResult Index()
         {
 			var BlogList = db.Blogs.ToList();
