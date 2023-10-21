@@ -85,5 +85,26 @@ namespace TripWebApplication.Controllers
 			return RedirectToAction("YorumListesi");
 		}
 
+		public ActionResult HakkimizdaListesi()
+		{
+			var hakkimizdaList = db.Hakkimizdas.ToList();
+			return View(hakkimizdaList);
+		}
+
+		public ActionResult HakkimizdaGetir(int id)
+		{
+			var hg = db.Hakkimizdas.Find(id);
+			return View("HakkimizdaGetir", hg);
+		}
+
+		public ActionResult HakkimizdaGuncelle(Hakkimizda h)
+		{
+			var hk = db.Hakkimizdas.Find(h.ID);
+			hk.PhotoUrl = h.PhotoUrl;
+			hk.Aciklama = h.Aciklama;
+			db.SaveChanges();
+			return RedirectToAction("HakkimizdaListesi");
+		}
+
 	}
 }

@@ -134,6 +134,7 @@
     <Compile Include="Controllers\GirisYapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RehberController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -222,6 +223,7 @@
     <Content Include="TripWeb\images\key.png" />
     <Content Include="TripWeb\images\link1-bg.gif" />
     <Content Include="TripWeb\images\logo.png" />
+    <Content Include="TripWeb\images\LogoBK.PNG" />
     <Content Include="TripWeb\images\Lyon.jpg" />
     <Content Include="TripWeb\images\pic.jpg" />
     <Content Include="TripWeb\images\pic1.jpg" />
@@ -293,6 +295,10 @@
     <Content Include="Views\Admin\YorumListesi.cshtml" />
     <Content Include="Views\Admin\YorumGetir.cshtml" />
     <Content Include="Views\GirisYap\Login.cshtml" />
+    <Content Include="Views\Admin\HakkimizdaListesi.cshtml" />
+    <Content Include="Views\Admin\HakkimizdaGetir.cshtml" />
+    <Content Include="Views\Contact\Contact.cshtml" />
+    <Content Include="Views\Contact\Mesaj.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

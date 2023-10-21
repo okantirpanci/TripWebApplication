@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<link href="~/tripweb2/css/bootstrap.css" rel="stylesheet" />
+<div class="contact">
+    <div class="wrap">
+        <div class="contact-top">
+            <h3>İletişim Bilgileri</h3>
+            <p> Aşağıda yer alan bilgiler üzerinden bize ulaşım sağlayabilirsiniz.</p>
+        </div>
+
+        @Html.Action("Mesaj", "Contact")
+        <!---728x90--->
+
+        <div class="clear"></div>
+        <div class="clear"></div>
+    </div>
+</div>
+
