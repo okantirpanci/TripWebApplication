@@ -15,6 +15,8 @@ namespace TripWebApplication.Controllers
         public ActionResult Index()
         {
             RehberPage.OtelList = db.Otellers.ToList();
+            RehberPage.RestorantList = db.Restorantlars.ToList();
+            RehberPage.MuzelerList = db.Muzelers.ToList();
             return View(RehberPage);
         }
 	}

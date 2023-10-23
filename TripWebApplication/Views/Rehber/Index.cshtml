@@ -30,7 +30,8 @@
         <div class="container">
             <div class="filters portfolio-filter">
                 <ul>
-                    <li class="active" data-filter="*">Oteller</li>
+                    <li class="active" data-filter="*">Hepsi</li>
+                    <li data-filter=".following">Oteller</li>
                     <li data-filter=".popular">Restorantlar</li>
                     <li data-filter=".latest"> Müzeler</li>
                 </ul>
@@ -47,63 +48,69 @@
                                 <div class="overlay"></div>
                                 <div class="short_info">
                                     <h4><a href="portfolio-details.html">@x.Baslik</a></h4>
-                                    <p>@x.Aciklama.Substring(0,10) ...</p>
+                                    <p>@x.Aciklama.Substring(0, 10) ...</p>
                                 </div>
                             </div>
                         </div>
                     }
 
+                    @foreach (var y in Model.RestorantList)
+                    {
+                        <div class="col-lg-6 col-md-6 all popular ">
+                            <div class="single_portfolio">
+                                <img class="img-fluid w-100" src="@y.PhotoUrl" alt="">
+                                <div class="overlay"></div>
+                                <div class="short_info">
+                                    <h4><a href="portfolio-details.html">@y.Baslik</a></h4>
+                                    <p>@y.Aciklama.Substring(0, 10) ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    @foreach (var z in Model.MuzelerList)
+                    {
+                        <div class="col-lg-6 col-md-6 all latest">
+                            <div class="single_portfolio">
+                                <img class="img-fluid w-100" src="@z.PhotoUrl" alt="">
+                                <div class="overlay"></div>
+                                <div class="short_info">
+                                    <h4><a href="portfolio-details.html">@z.Baslik</a></h4>
+                                    <p>@z.Aciklama.Substring(0, 10) ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
 
-                    @*<div class="col-lg-6 col-md-6 all latest popular upcoming">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="~/breed2/img/portfolio/p4.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 all latest following">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="~/breed2/img/portfolio/p2.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 all latest upcoming">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="~/breed2/img/portfolio/p3.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 all popular">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="~/breed2/img/portfolio/p6.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 all popular latest following">
-                            <div class="single_portfolio">
-                                <img class="img-fluid w-100" src="~/breed2/img/portfolio/p5.jpg" alt="">
-                                <div class="overlay"></div>
-                                <div class="short_info">
-                                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
-                                    <p>Art, Illustration</p>
-                                </div>
-                            </div>
-                        </div>*@
+                    @*<div class="col-lg-3 col-md-6 all latest upcoming">
+            <div class="single_portfolio">
+                <img class="img-fluid w-100" src="~/breed2/img/portfolio/p3.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="short_info">
+                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
+                    <p>Art, Illustration</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 all popular">
+            <div class="single_portfolio">
+                <img class="img-fluid w-100" src="~/breed2/img/portfolio/p6.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="short_info">
+                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
+                    <p>Art, Illustration</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 all popular latest following">
+            <div class="single_portfolio">
+                <img class="img-fluid w-100" src="~/breed2/img/portfolio/p5.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="short_info">
+                    <h4><a href="portfolio-details.html">Lens Mockup Design</a></h4>
+                    <p>Art, Illustration</p>
+                </div>
+            </div>
+        </div>*@
                 </div>
             </div>
         </div>
