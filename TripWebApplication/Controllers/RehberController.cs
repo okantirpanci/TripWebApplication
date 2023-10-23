@@ -19,5 +19,21 @@ namespace TripWebApplication.Controllers
             RehberPage.MuzelerList = db.Muzelers.ToList();
             return View(RehberPage);
         }
+
+        public ActionResult OtelDetails(int id)
+        {
+            var OtelList = db.Otellers.Where(x => x.ID == id).ToList();
+            return View(OtelList);  
+        } 
+        public ActionResult RestorantDetails(int id)
+        {
+            var RestorantList = db.Restorantlars.Where(x => x.ID == id).ToList();
+            return View(RestorantList);  
+        }
+        public ActionResult MuzeDetails(int id)
+        {
+            var MuzelerList = db.Muzelers.Where(x => x.ID == id).ToList();
+            return View(MuzelerList);  
+        }
 	}
 }

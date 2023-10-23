@@ -1,0 +1,83 @@
+﻿
+@using TripWebApplication.Models.Sınıflar
+@model List<Restorantlar>
+
+@{
+    ViewBag.Title = "RestorantDetails";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="~/breed2/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="~/breed2/css/bootstrap.css">
+    <link rel="stylesheet" href="~/breed2/vendors/linericon/style.css">
+    <link rel="stylesheet" href="~/breed2/css/themify-icons.css">
+    <link rel="stylesheet" href="~/breed2/vendors/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/breed2/vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="~/breed2/vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/breed2/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/breed2/vendors/nice-select/css/nice-select.css">
+
+    <link rel="stylesheet" href="~/breed2/css/style.css">
+</head>
+<body>
+
+    <section class="portfolio_details_area">
+        <div class="container">
+            <div class="row">
+                <div class="offset-xl-1 col-xl-10">
+                    <div class="portfolio_details_inner">
+                        @foreach (var x in Model)
+                        {
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="left_img">
+                                        <h2>@x.Baslik</h2>
+                                        <img class="img-fluid" src="@x.PhotoUrl" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p>
+                                        @x.Aciklama
+                                    </p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/breed2/js/jquery-3.2.1.min.js"></script>
+    <script src="~/breed2/js/popper.js"></script>
+    <script src="~/breed2/js/bootstrap.min.js"></script>
+    <script src="~/breed2/js/stellar.js"></script>
+    <script src="~/breed2/vendors/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="~/breed2/vendors/isotope/isotope-min.js"></script>
+    <script src="~/breed2/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/breed2/js/jquery.ajaxchimp.min.js"></script>
+    <script src="~/breed2/js/mail-script.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="~/breed2/js/gmaps.min.js"></script>
+    <script src="~/breed2/js/theme.js"></script>
+
+    <script async="" src="../../gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');</script>
+    <script defer="" src="../../beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"7fca75440acccb2a","version":"2023.8.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
