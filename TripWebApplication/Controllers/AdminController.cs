@@ -106,5 +106,18 @@ namespace TripWebApplication.Controllers
 			return RedirectToAction("HakkimizdaListesi");
 		}
 
+		public ActionResult ContactList()
+		{
+			var ContactList = db.Iletisims.ToList();
+			return View(ContactList);
+		}
+		public ActionResult ContactDelete(int id)
+		{
+			var Cd = db.Iletisims.Find(id);
+			db.Iletisims.Remove(Cd);
+			db.SaveChanges();
+			return RedirectToAction("ContactList");
+		}
+
 	}
 }

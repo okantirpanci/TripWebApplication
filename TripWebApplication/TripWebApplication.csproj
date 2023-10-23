@@ -299,6 +299,7 @@
     <Content Include="Views\Admin\HakkimizdaGetir.cshtml" />
     <Content Include="Views\Contact\Contact.cshtml" />
     <Content Include="Views\Contact\Mesaj.cshtml" />
+    <Content Include="Views\Admin\ContactList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

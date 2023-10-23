@@ -1,0 +1,37 @@
+﻿@using TripWebApplication.Models.Sınıflar
+@model List<İletisim>
+
+@{
+    ViewBag.Title = "ContactList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h2>Mesaj Listesi</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>AdSoyad</th>
+        <th>Mail</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.AdSoyad</td>
+            <td>@x.Mail</td>
+            <td>@x.Konu</td>
+            <td>@x.Mesaj</td>
+            <td><a href="/Admin/ContactDelete/@x.ID" class="btn btn-warning">Sil</a></td>
+        </tr>
+    }
+
+
+</table>
+
